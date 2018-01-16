@@ -11,6 +11,8 @@ namespace Sino.RestBus.RabbitMQ
     {
         protected readonly string[] amqpHostUris;
         protected readonly string serviceName;
+        public virtual IList<AmqpConnectionInfo> ServerUris { get; protected set; }
+        public virtual ExchangeKind SupportedExchangeKinds { get; protected set; }
 
         public BasicMessageMapper(string amqpHostUri, string serviceName)
         {
@@ -31,9 +33,6 @@ namespace Sino.RestBus.RabbitMQ
             SupportedExchangeKinds = ExchangeKind.Direct;
         }
 
-        public virtual IList<AmqpConnectionInfo> ServerUris { get; protected set; }
-        public virtual ExchangeKind SupportedExchangeKinds { get; protected set; }
-
         public virtual MessagingConfiguration MessagingConfig
         {
             get
@@ -44,8 +43,6 @@ namespace Sino.RestBus.RabbitMQ
 
         public virtual string GetServiceName(HttpRequestMessage request)
         {
-            //TODO: Have a static helper that callers to GetServiceName will use to check that for valid servicenames.
-
             return serviceName;
         }
 
@@ -60,8 +57,6 @@ namespace Sino.RestBus.RabbitMQ
         /// <remarks>
         /// This is only useful for the headers exchange type.
         /// </remarks>
-        /// <param name="request"></param>
-        /// <returns></returns>
         public virtual IDictionary<string, object> GetHeaders(HttpRequestMessage request)
         {
             return null;
@@ -73,8 +68,6 @@ namespace Sino.RestBus.RabbitMQ
         /// <remarks>
         /// This helper is useful for classes deriving from BasicMessageMapper.
         /// </remarks>
-        /// <param name="request"></param>
-        /// <returns></returns>
         public static RequestOptions GetRequestOptions(HttpRequestMessage request)
         {
             return MessageInvokerBase.GetRequestOptions(request);

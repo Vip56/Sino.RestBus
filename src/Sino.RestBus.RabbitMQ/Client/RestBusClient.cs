@@ -39,9 +39,7 @@ namespace Sino.RestBus.RabbitMQ.Client
         /// Initializes a new instance of the <see cref="T:RestBus.RabbitMQ.RestBusClient" /> class.
         /// </summary>
         /// <param name="messageMapper">The <see cref="IMessageMapper" /> the client uses to route messages.</param>
-        public RestBusClient(IMessageMapper messageMapper) : this(messageMapper, null)
-        {
-        }
+        public RestBusClient(IMessageMapper messageMapper) : this(messageMapper, null) { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="T:RestBus.RabbitMQ.RestBusClient" /> class.
@@ -485,7 +483,4 @@ namespace Sino.RestBus.RabbitMQ.Client
             return (options.Properties as RabbitMQMessagingProperties) ?? _defaultMessagingProperties;
         }
     }
-
-
-
 }

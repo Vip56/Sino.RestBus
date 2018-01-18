@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RestBus.WebApi
+namespace Sino.RestBus.WebApi
 {
     public class RestBusHost : IDisposable
     {
@@ -97,7 +97,7 @@ namespace RestBus.WebApi
 
         private async Task ProcessRequest(MessageContext restbusContext, CancellationToken cancellationToken)
         {
-
+            subscriber.SendResponse(restbusContext, CreateResponsePacketFromMessage(CreateResponseMessageFromException(new InvalidOperationException()), subscriber));
         }
 
         private static bool TryGetHttpRequestMessage(HttpRequestPacket packet, string virtualPath, string hostname, out HttpRequestMessage request)

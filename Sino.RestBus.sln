@@ -15,7 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{608ACF23-E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestBusWebTest", "test\RestBusWebTest\RestBusWebTest.csproj", "{3019FAD0-7A03-4EAE-841E-3524528B83EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sino.RestBus.WebApi", "src\Sino.RestBus.WebApi\Sino.RestBus.WebApi.csproj", "{9F397CE6-3800-48D9-A025-49F6F48738D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sino.RestBus.WebApi", "src\Sino.RestBus.WebApi\Sino.RestBus.WebApi.csproj", "{9F397CE6-3800-48D9-A025-49F6F48738D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".global", ".global", "{5AC9A33A-57DF-403A-BB75-43CD3E3DB2F6}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

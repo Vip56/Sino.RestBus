@@ -9,7 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sino.RestBus.RabbitMQ;
+using Sino.RestBus.RabbitMQ.Client;
 using Sino.RestBus.RabbitMQ.Subscription;
+using Sino.RestBus.WebApi;
 
 namespace RestBusWebTest
 {
@@ -34,8 +36,11 @@ namespace RestBusWebTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            var msgMapper = new BasicMessageMapper("localhost:5672", "test");
+            var msgMapper = new BasicMessageMapper("amqp://localhost:5672", "test");
             var subscriber = new RestBusSubscriber(msgMapper);
+            var restbusHost = new RestBusHost(subscriber);
+            restbusHost.Start();
+            services.AddSingleton<RestBusClient>(new RestBusClient(msgMapper));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

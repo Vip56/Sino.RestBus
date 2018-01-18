@@ -63,17 +63,6 @@ namespace Sino.RestBus.RabbitMQ
         }
 
         /// <summary>
-        /// Returns the RequestOptions associated with a specified request.
-        /// </summary>
-        /// <remarks>
-        /// This helper is useful for classes deriving from BasicMessageMapper.
-        /// </remarks>
-        public static RequestOptions GetRequestOptions(HttpRequestMessage request)
-        {
-            return MessageInvokerBase.GetRequestOptions(request);
-        }
-
-        /// <summary>
         ///  Removes the username, password and query components of an AMQP uri.
         /// </summary>
         public static string StripUserInfoAndQuery(string amqpUri)

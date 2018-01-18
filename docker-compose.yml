@@ -1,0 +1,7 @@
+version: '2'
+services:
+  eventbus:
+    image: index.alauda.cn/library/rabbitmq:3.4-management
+    ports:
+      - 5672:5672
+      - 15672:15672

@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Sino.RestBus.RabbitMQ;
+using Sino.RestBus.RabbitMQ.Subscription;
 
 namespace RestBusWebTest
 {
@@ -33,7 +34,8 @@ namespace RestBusWebTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            var msgMapper = new BasicMessageMapper();
+            var msgMapper = new BasicMessageMapper("localhost:5672", "test");
+            var subscriber = new RestBusSubscriber(msgMapper);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

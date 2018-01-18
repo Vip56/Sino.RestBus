@@ -5,15 +5,17 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8756F828-7DFA-415D-9234-1C49EAF4E0B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sino.RestBus.Common", "src\Sino.RestBus.Common\Sino.RestBus.Common.csproj", "{0731F56F-3C75-4EB7-96BE-A679EB5ECE5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sino.RestBus.Common", "src\Sino.RestBus.Common\Sino.RestBus.Common.csproj", "{0731F56F-3C75-4EB7-96BE-A679EB5ECE5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sino.RestBus.Client", "src\Sino.RestBus.Client\Sino.RestBus.Client.csproj", "{2465115A-0BD2-4851-B9A6-A92699273FC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sino.RestBus.Client", "src\Sino.RestBus.Client\Sino.RestBus.Client.csproj", "{2465115A-0BD2-4851-B9A6-A92699273FC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sino.RestBus.RabbitMQ", "src\Sino.RestBus.RabbitMQ\Sino.RestBus.RabbitMQ.csproj", "{BA19782A-AB24-4027-84A0-43947F9CEBDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sino.RestBus.RabbitMQ", "src\Sino.RestBus.RabbitMQ\Sino.RestBus.RabbitMQ.csproj", "{BA19782A-AB24-4027-84A0-43947F9CEBDE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{608ACF23-E31A-40FB-B495-AF0AA4B212AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestBusWebTest", "test\RestBusWebTest\RestBusWebTest.csproj", "{3019FAD0-7A03-4EAE-841E-3524528B83EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestBusWebTest", "test\RestBusWebTest\RestBusWebTest.csproj", "{3019FAD0-7A03-4EAE-841E-3524528B83EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sino.RestBus.WebApi", "src\Sino.RestBus.WebApi\Sino.RestBus.WebApi.csproj", "{9F397CE6-3800-48D9-A025-49F6F48738D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{3019FAD0-7A03-4EAE-841E-3524528B83EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3019FAD0-7A03-4EAE-841E-3524528B83EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3019FAD0-7A03-4EAE-841E-3524528B83EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F397CE6-3800-48D9-A025-49F6F48738D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F397CE6-3800-48D9-A025-49F6F48738D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F397CE6-3800-48D9-A025-49F6F48738D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F397CE6-3800-48D9-A025-49F6F48738D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{2465115A-0BD2-4851-B9A6-A92699273FC3} = {8756F828-7DFA-415D-9234-1C49EAF4E0B5}
 		{BA19782A-AB24-4027-84A0-43947F9CEBDE} = {8756F828-7DFA-415D-9234-1C49EAF4E0B5}
 		{3019FAD0-7A03-4EAE-841E-3524528B83EF} = {608ACF23-E31A-40FB-B495-AF0AA4B212AD}
+		{9F397CE6-3800-48D9-A025-49F6F48738D5} = {8756F828-7DFA-415D-9234-1C49EAF4E0B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63282610-6F66-45C8-86A4-513BDC6238C2}
